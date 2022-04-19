@@ -1,2 +1,5 @@
 .idea/
 venv/
+db.sqlite3
+AThousandDays/homepage/migrations/
+__pycache__

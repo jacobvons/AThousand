@@ -1,0 +1,32 @@
+{% load static %}
+<link rel="stylesheet" type="text/css", href="{% static 'css/home.css' %}">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1000DAYS</title>
+</head>
+<body background="../../static/images/homebackground.jpg">
+
+<div class="centre_circle" id="centre_day_count_background">
+    <div id="day_count">1000</div>
+    <div id="days_togther">Days Together</div>
+</div>
+
+<div class="centre_circle" id="halo1"></div>
+
+
+<a href="foods"><div class="category_box" id="foods">FOODS</div></a>
+<a href="movies"><div class="category_box" id="movies">MOVIES</div></a>
+<a href="musics"><div class="category_box" id="musics">MUSICS</div></a>
+<a href="photos"><div class="category_box" id="photos">PHOTOS</div></a>
+<a href="places"><div class="category_box" id="places">PLACES</div></a>
+<a href="words"><div class="category_box" id="words">WORDS</div></a>
+
+</body>
+</html>
+
+<audio id="player" controls loop src="../../static/bgms/IULovePoem.mp3"></audio>
+
+<script src="../../static/js/home.js"></script>
