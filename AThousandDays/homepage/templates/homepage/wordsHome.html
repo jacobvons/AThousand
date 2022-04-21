@@ -1,10 +1,30 @@
+{% load static %}
+<link rel="stylesheet" type="text/css", href="{% static 'css/word.css' %}">
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>WORDS</title>
+    <title>Movies</title>
 </head>
 <body>
-This is words page!
+<div class="display_area">
+    <img class="display_item" id="word_pic" src="/uploaded/{{word.img}}" alt="image" />
+    <div class="display_item" id="word_texts">
+        <div class="text_item" id="title">{{word.title}}</div>
+        <div class="text_item" id="by">By: {{word.by}}</div>
+        <div class="text_item" id="date">Date: {{word.date}}</div>
+        <div class="text_item" id="description">{{word.description}}</div>
+        <button id="next_word_btn" onclick="updatePage()">Next</button>
+    </div>
+</div>
+
+<div id="pk">{{word.pk}}</div>
+
 </body>
 </html>
+
+<script>
+    const allPks = {{all_pks}};
+</script>
+<script src="../../static/js/word.js"></script>

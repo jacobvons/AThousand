@@ -1,10 +1,30 @@
+{% load static %}
+<link rel="stylesheet" type="text/css", href="{% static 'css/photo.css' %}">
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>PHOTOS</title>
+    <title>Movies</title>
 </head>
 <body>
-This is photos page!
+<div class="display_area">
+    <img class="display_item" id="photo_pic" src="/uploaded/{{photo.img}}" alt="image" />
+    <div class="display_item" id="photo_texts">
+        <div class="text_item" id="title">{{photo.title}}</div>
+        <div class="text_item" id="by">By: {{photo.by}}</div>
+        <div class="text_item" id="date">Date: {{photo.date}}</div>
+        <div class="text_item" id="description">{{photo.description}}</div>
+        <button id="next_photo_btn" onclick="updatePage()">Next</button>
+    </div>
+</div>
+
+<div id="pk">{{photo.pk}}</div>
+
 </body>
 </html>
+
+<script>
+    const allPks = {{all_pks}};
+</script>
+<script src="../../static/js/photo.js"></script>

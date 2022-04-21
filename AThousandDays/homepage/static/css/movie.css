@@ -1,0 +1,80 @@
+body {
+  background: linear-gradient( rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75) ), url(../images/moviebackgound.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+div {
+  font-family: Rockwell;
+}
+
+#pk {
+  font-size: 0;
+}
+
+.display_area {
+  -webkit-animation: fadeIn 2s;
+  position: absolute;
+  /*border-style: solid;*/
+  /*border-color: white;*/
+  height: 60%;
+  width: 70%;
+  top: 20%;
+  left: 15%;
+}
+
+.display_item {
+  height: 100%;
+  position: relative;
+  border-radius: 10%;
+}
+
+#movie_texts {
+  border-width: 0;
+  background-color: transparent;
+  width: 35%;
+  height: 100%;
+  left: 62%;
+  bottom: 100%;
+}
+
+#movie_texts {
+  color: white;
+  line-height: 2.5;
+}
+
+#title {
+  font-size: 30px;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+#next_movie_btn {
+  position: relative;
+  left: 80%;
+  top: 345px;
+  height: 10%;
+  width: 20%;
+  border-radius: 30%;
+  font-size: 15px;
+  text-align: center;
+  line-height: 10%;
+  font-family: Rockwell;
+  transition-duration: 0.4s;
+  border: none;
+  display: inline-block;
+  text-decoration: none;
+}
+
+
+#next_movie_btn:hover {
+  background-color: gray;
+  color: white;
+}
+
+#next_movie_btn:active {
+  transform: scale(0.9);
+}

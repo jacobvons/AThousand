@@ -4,6 +4,10 @@ body {
   background-size: 100%;
 }
 
+div {
+  font-family: Rockwell;
+}
+
 audio {
   width: 3%;
   height: 3%;
@@ -15,48 +19,31 @@ audio {
 }
 
 .centre_circle {
-  -webkit-animation: fadeIn 5s;
-  width: 450px;
-  height: 450px;
-  /*line-height: 450px;*/
+  width: 500px;
+  height: 500px;
   border-radius: 50%;
   font-size: 50px;
   color: #fff;
   text-align: center;
-  /*background: #000;*/
   margin: auto;
     position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
-    /*box-shadow: 0 0 200px 0 #832113;*/
-    box-shadow: 0 0 200px 0 hotpink;
 }
 
 #centre_day_count_background {
-  background: #000;
+  background: transparent;
+  box-shadow: 0 0 200px 0 hotpink;
 }
 
-#halo1 {
-  -webkit-animation: expand 1.86s;
+#halo {
+  background: transparent;
+  -webkit-animation: ripple 1.86s;
   -webkit-animation-iteration-count: infinite;
-  width: 450px;
-  height: 450px;
-  border-radius: 50%;
   border-color: deepskyblue;
-  margin: auto;
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-}
-
-
-@-webkit-keyframes expand {
-  0% {opacity:0.4; width: 450px; height: 450px;}
-  100% {opacity:0; width: 700px; height: 700px;}
+  border-style: solid;
 }
 
 #day_count {
@@ -67,98 +54,99 @@ audio {
   position: relative;
 }
 
+#left_align {
+  height: 100%;
+  left: 0;
+  line-height: 100%;
+}
+
+#right_align {
+  height: 100%;
+  left: 85%;
+  line-height: 100%;
+}
+
+.category_box {
+  -webkit-animation: fadeIn 4s;
+  background-size: 100%;
+  border-radius: 50%;
+  position: absolute;
+  color: white;
+
+  width: 15%;
+  height: 0;
+  padding-bottom: 15%;
+  line-height: 300px;
+  font-size: 35px;
+
+  text-align: center;
+}
+
 .category_box:hover {
-  transform: scale(1.2);
-  transform-origin: center;
+  transform: scale(1.5);
   transition: 0.8s;
+  z-index: 3;
+}
+#foods:hover {
+  transform-origin: left top;
+}
+#movies:hover {
+  transform-origin: center;
+}
+#musics:hover {
+  transform-origin: left bottom;
+}
+#photos:hover {
+  transform-origin: right top;
+}
+#places:hover {
+  transform-origin: center;
+}
+#words:hover {
+  transform-origin: right bottom;
 }
 
 #foods{
-  -webkit-animation: fadeIn 7s;
-  width: 400px;
-  height: 225px;
-  color: white;
-  position: absolute;
-  top: 6%;
-  left: 8%;
-  text-align: center;
-  font-size: 40px;
-  text-align-all: center;
+  top: 0;
   background-image: url('../images/foodCover.jpg');
-  background-size: 100% 100%;
 }
 
 #movies{
-  -webkit-animation: fadeIn 10s;
-  width: 400px;
-  height: 225px;
-  color: white;
-  position: absolute;
-  top: 39%;
-  left: 12%;
-  text-align: center;
-  font-size: 40px;
+  left: 10%;
+  top: 36%;
   background-image: url('../images/movieCover.jpg');
-  background-size: 100% 100%;
 }
 
 #musics{
-  -webkit-animation: fadeIn 10s;
-  width: 400px;
-  height: 225px;
-  color: white;
-  position: absolute;
-  top: 68%;
-  left: 10%;
-  text-align: center;
-  font-size: 40px;
+  bottom: 0;
   background-image: url('../images/musicCover.jpg');
-  background-size: 100% 100%;
 }
 
 #photos{
-  -webkit-animation: fadeIn 10s;
-  width: 400px;
-  height: 225px;
-  color: white;
-  position: absolute;
-  top: 8%;
-  right: 10%;
-  text-align: center;
-  font-size: 40px;
+  top: 0;
+  left: 85%;
   background-image: url('../images/photoCover.jpg');
-  background-size: 100% 100%;
 }
 
 #places{
-  -webkit-animation: fadeIn 10s;
-  width: 400px;
-  height: 225px;
-  color: white;
-  position: absolute;
-  top: 38%;
-  right: 13%;
-  text-align: center;
-  font-size: 40px;
+  top: 36%;
+  left: 75%;
   background-image: url('../images/placeCover.jpg');
-  background-size: 100% 100%;
 }
 
 #words{
-  -webkit-animation: fadeIn 10s;
-  width: 400px;
-  height: 225px;
-  color: white;
-  position: absolute;
-  top: 70%;
-  right: 9%;
-  text-align: center;
-  font-size: 40px;
+  bottom: 0;
+  left: 85%;
   background-image: url('../images/wordCover.jpg');
-  background-size: 100% 100%;
 }
 
 @-webkit-keyframes fadeIn {
   0% {opacity:0;}
   100% {opacity:1;}
+}
+
+
+@-webkit-keyframes ripple {
+  0% {opacity:0.4; width: 500px; height: 500px;}
+  100% {opacity:0; width: 750px; height: 750px;}
 }

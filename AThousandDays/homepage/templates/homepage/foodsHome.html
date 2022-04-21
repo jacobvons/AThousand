@@ -1,3 +1,6 @@
+{% load static %}
+<link rel="stylesheet" type="text/css", href="{% static 'css/food.css' %}">
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +8,23 @@
     <title>Foods</title>
 </head>
 <body>
-This is foods page!
+<div class="display_area">
+    <img class="display_item" id="food_pic" src="/uploaded/{{food.img}}" alt="image" />
+    <div class="display_item" id="food_texts">
+        <div class="text_item" id="title">{{food.title}}</div>
+        <div class="text_item" id="by">By: {{food.by}}</div>
+        <div class="text_item" id="date">Date: {{food.date}}</div>
+        <div class="text_item" id="description">{{food.description}}</div>
+        <button id="next_food_btn" onclick="updatePage()">Next</button>
+    </div>
+</div>
+
+<div id="pk">{{food.pk}}</div>
+
 </body>
 </html>
+
+<script>
+    const allPks = {{all_pks}};
+</script>
+<script src="../../static/js/food.js"></script>

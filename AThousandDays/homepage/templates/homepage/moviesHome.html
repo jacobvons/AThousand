@@ -1,10 +1,30 @@
+{% load static %}
+<link rel="stylesheet" type="text/css", href="{% static 'css/movie.css' %}">
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>MOVIES</title>
+    <title>Movies</title>
 </head>
 <body>
-This is movies page!
+<div class="display_area">
+    <img class="display_item" id="movie_pic" src="/uploaded/{{movie.img}}" alt="image" />
+    <div class="display_item" id="movie_texts">
+        <div class="text_item" id="title">{{movie.title}}</div>
+<!--        <div class="text_item" id="by">By: {{movie.by}}</div>-->
+        <div class="text_item" id="date">Date: {{movie.date}}</div>
+        <div class="text_item" id="description">{{movie.description}}</div>
+        <button id="next_movie_btn" onclick="updatePage()">Next</button>
+    </div>
+</div>
+
+<div id="pk">{{movie.pk}}</div>
+
 </body>
 </html>
+
+<script>
+    const allPks = {{all_pks}};
+</script>
+<script src="../../static/js/movie.js"></script>

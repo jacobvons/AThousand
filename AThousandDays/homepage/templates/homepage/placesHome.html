@@ -1,10 +1,30 @@
+{% load static %}
+<link rel="stylesheet" type="text/css", href="{% static 'css/place.css' %}">
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>PLACES</title>
+    <title>Movies</title>
 </head>
 <body>
-This is places page!
+<div class="display_area">
+    <img class="display_item" id="place_pic" src="/uploaded/{{place.img}}" alt="image" />
+    <div class="display_item" id="place_texts">
+        <div class="text_item" id="title">{{place.title}}</div>
+        <div class="text_item" id="by">By: {{place.by}}</div>
+        <div class="text_item" id="date">Date: {{place.date}}</div>
+        <div class="text_item" id="description">{{place.description}}</div>
+        <button id="next_place_btn" onclick="updatePage()">Next</button>
+    </div>
+</div>
+
+<div id="pk">{{place.pk}}</div>
+
 </body>
 </html>
+
+<script>
+    const allPks = {{all_pks}};
+</script>
+<script src="../../static/js/place.js"></script>

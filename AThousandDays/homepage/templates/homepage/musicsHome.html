@@ -1,10 +1,30 @@
+{% load static %}
+<link rel="stylesheet" type="text/css", href="{% static 'css/music.css' %}">
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>MUSICS</title>
+    <title>Movies</title>
 </head>
 <body>
-This is musics page!
+<div class="display_area">
+    <img class="display_item" id="music_pic" src="/uploaded/{{music.img}}" alt="image" />
+    <div class="display_item" id="music_texts">
+        <div class="text_item" id="title">{{music.title}}</div>
+        <div class="text_item" id="by">By: {{music.by}}</div>
+<!--        <div class="text_item" id="date">Date: {{music.date}}</div>-->
+        <div class="text_item" id="description">{{music.description}}</div>
+        <button id="next_music_btn" onclick="updatePage()">Next</button>
+    </div>
+</div>
+
+<div id="pk">{{music.pk}}</div>
+
 </body>
 </html>
+
+<script>
+    const allPks = {{all_pks}};
+</script>
+<script src="../../static/js/music.js"></script>

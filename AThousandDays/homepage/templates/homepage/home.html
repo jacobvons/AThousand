@@ -10,23 +10,29 @@
 <body background="../../static/images/homebackground.jpg">
 
 <div class="centre_circle" id="centre_day_count_background">
-    <div id="day_count">1000</div>
-    <div id="days_togther">Days Together</div>
+    <div class="text_box" id="day_count">{{days_together}}</div>
+    <div class="text_box" id="days_togther">Days Together</div>
 </div>
 
-<div class="centre_circle" id="halo1"></div>
+<div class="centre_circle" id="halo"></div>
 
+<!--Left-->
+<div id="left_align">
+    <a href="foods"><div class="category_box" id="foods">FOODS</div></a>
+    <a href="movies"><div class="category_box" id="movies">MOVIES</div></a>
+    <a href="musics"><div class="category_box" id="musics">MUSICS</div></a>
+</div>
 
-<a href="foods"><div class="category_box" id="foods">FOODS</div></a>
-<a href="movies"><div class="category_box" id="movies">MOVIES</div></a>
-<a href="musics"><div class="category_box" id="musics">MUSICS</div></a>
-<a href="photos"><div class="category_box" id="photos">PHOTOS</div></a>
-<a href="places"><div class="category_box" id="places">PLACES</div></a>
-<a href="words"><div class="category_box" id="words">WORDS</div></a>
+<!--Right-->
+<div id="right_align">
+    <a href="photos"><div class="category_box" id="photos">PHOTOS</div></a>
+    <a href="places"><div class="category_box" id="places">PLACES</div></a>
+    <a href="words"><div class="category_box" id="words">WORDS</div></a>
+</div>
 
 </body>
 </html>
 
-<audio id="player" controls loop src="../../static/bgms/IULovePoem.mp3"></audio>
+<audio id="player" autoplay controls loop src="../../static/bgms/IULovePoem.mp3"></audio>
 
 <script src="../../static/js/home.js"></script>
