@@ -53,12 +53,12 @@ div {
 }
 
 #next_music_btn {
-  position: relative;
-  left: 80%;
-  top: 345px;
-  height: 10%;
-  width: 20%;
-  border-radius: 30%;
+  position: absolute;
+  border-radius: 20%;
+  left: 430px;
+  top: 550px;
+  height: 50px;
+  width: 75px;
   font-size: 15px;
   text-align: center;
   line-height: 10%;

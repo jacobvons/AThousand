@@ -76,7 +76,10 @@ class PhotoViewSet(viewsets.ModelViewSet):
 
 
 def places_home(request):
-    return render(request, "homepage/placesHome.html")
+    place = Place.objects.get(pk=get_random_pk(Place))
+    all_pks = list(Place.objects.values_list("pk", flat=True))
+    context = {"place": place, "all_pks": all_pks}
+    return render(request, "homepage/placesHome.html", context)
 
 
 class PlaceViewSet(viewsets.ModelViewSet):
@@ -85,7 +88,10 @@ class PlaceViewSet(viewsets.ModelViewSet):
 
 
 def words_home(request):
-    return render(request, "homepage/wordsHome.html")
+    word = Word.objects.get(pk=get_random_pk(Word))
+    all_pks = list(Word.objects.values_list("pk", flat=True))
+    context = {"word": word, "all_pks": all_pks}
+    return render(request, "homepage/wordsHome.html", context)
 
 
 class WordViewSet(viewsets.ModelViewSet):

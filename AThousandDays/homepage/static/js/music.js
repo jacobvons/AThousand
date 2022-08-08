@@ -16,7 +16,7 @@ async function updatePage() {
 
 function getNewRandPk() {
     var pk = allPks[Math.floor(Math.random() * allPks.length)];
-    while (appPks.length != 1 && pk == document.getElementById("pk").innerText) {
+    while (allPks.length != 1 && pk == document.getElementById("pk").innerText) {
         pk = allPks[Math.floor(Math.random() * allPks.length)];
     }
     return pk;

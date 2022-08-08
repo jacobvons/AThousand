@@ -18,6 +18,7 @@ class Word(models.Model):
 class Photo(models.Model):
     title = models.CharField(max_length=50)
     by = models.CharField(max_length=30)
+    date = models.DateField(blank=True, null=True)
     img = models.ImageField()
     description = models.TextField()
 

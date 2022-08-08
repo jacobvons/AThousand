@@ -24,7 +24,7 @@ class MusicSerializer(serializers.HyperlinkedModelSerializer):
 class PhotoSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Photo
-        fields = ("pk", "title", "description", "img", "by")
+        fields = ("pk", "title", "description", "img", "by", "date")
 
 
 class PlaceSerializer(serializers.HyperlinkedModelSerializer):

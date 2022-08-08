@@ -5,15 +5,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Movies</title>
+    <title>Places</title>
 </head>
 <body>
 <div class="display_area">
     <img class="display_item" id="place_pic" src="/uploaded/{{place.img}}" alt="image" />
     <div class="display_item" id="place_texts">
         <div class="text_item" id="title">{{place.title}}</div>
-        <div class="text_item" id="by">By: {{place.by}}</div>
-        <div class="text_item" id="date">Date: {{place.date}}</div>
+        <div class="text_item" id="address">Address: {{place.address}}</div>
+        <div class="text_item" id="dateStart">Date Start: {{place.date_start}}</div>
+        <div class="text_item" id="dateEnd">Date End: {{place.date_end}}</div>
         <div class="text_item" id="description">{{place.description}}</div>
         <button id="next_place_btn" onclick="updatePage()">Next</button>
     </div>
